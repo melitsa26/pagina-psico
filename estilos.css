@@ -1,211 +1,237 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,700&family=Rubik&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,700&family=Rubik&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing:border-box;
 }
-body{
-    background:rgba(141, 100, 61, 0.4);
-    margin: 0;
-    font-family: 'Rubik', sans-serif;
+body {
+  background: none;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {
-    width: 95%;
-    margin: 0 auto;
+  width: 95%;
+  margin: 0 auto;
 }
-.container-contenido{
-    width: 75%;
-    max-width: 850px;
-    margin: 0 auto;
+.container-contenido {
+  width: 75%;
+  max-width: 850px;
+  margin: 0 auto;
+}
 
-}
+/*barra navegacion */
 
 .header {
-    background:rgba(248, 248, 247, 0.4);
-    padding: 2rem 0;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
+  background-color: rgba(38, 50, 88, 0.418);
+  padding: 2rem 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: all 0.3s;
 }
 
 .header a {
-    color:rgb(44, 3, 15);
-    text-decoration: none;
-    font-weight: bold;
-    font-family:"Montserrat", sans-serif;
-    
+  color: rgb(245, 240, 242);
+  text-decoration: none;
+  font-weight: 100;
+  font-family: "Montserrat", sans-serif;
 }
 
-
-.logo-nav-container{
-    display:flex;
-    justify-content:space-between;
-    align-items: center;
+.logo-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.logo {
+  letter-spacing: 3px;
+  font-size: 40px;
+  white-space: nowrap;
+  
+}
 .navigation ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items:baseline;
+  
 }
 
 .navigation ul li {
-    display: inline-block;
-
+  display: inline-block;
+   
 }
 .navigation ul li a {
-    display: block;
-    padding: 0.5rem 1rem;
-    font-size: 20px;
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 20px;
+ 
 }
 
 .navigation ul li a:hover {
-    background:none;
-    color: rgba(117, 21, 21, 0.774);
-    
-}
-.logo {
-    letter-spacing: 10px;
-    font-size: 35px;
-    
+  background: none;
+  text-decoration: underline;
 }
 
+/*Seccion principal*/
+
 .background {
-    background: url(imagenes/librosflor.jpg); 
-    background-size: 50%; 
-    height: 800px;
-    text-align: center; 
-    background-repeat: repeat; 
-    background-position: center
+  font-size: 16px;
+  min-height: 40.62em;
+  background-image: url(imagenes/Biblioteca.jpg);
+  text-align: center;
+  background-position:center center;
+  background-size: cover; 
 }
 
 .background .mifoto {
-    margin-top: 150px;
-    width: 300px;
-    border-image: linear-gradient;
-    border-width: 6px;
-    border-color:rgb(44, 3, 15);
-    border-style:solid;
-    border-radius: 100%;
-
+  margin-top: 150px;
+  width: 300px;
+  border-image: linear-gradient;
+  border-width: 6px;
+  border-color: rgba(5, 15, 37, 0.966);
+  border-style: solid;
+  border-radius: 100%;
 }
 
 .titulo-foto {
-    color: rgb(44, 3, 15);
-    background-color:  rgba(248, 248, 247, 0.4);
-    
-    border-radius: 50px;
-    display: inline;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 40px;
-    
-    /*
-    font-size: 20px;
-    color: rgb(44, 3, 15);
-    padding: 5px;
-    margin-top: 20px;
+  color: rgb(248, 245, 245);
+  background-color:rgba(38, 50, 88, 0.518);
+  background-size:contain;
+  border-radius: 10px;
+  display: inline;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
+  font-weight: 50;
 
-    align-items: center;
-    */
-    
+}
+.frase h2 {
+  display: inline;
+  text-align: center;
+  color: rgb(248, 242, 244);
+  background: rgba(5, 15, 37, 0.966);
+  border-radius: 200px;
+  padding: 5px;
+  font-weight: 100;
 }
 
-.frase h2{
-    display: inline;
-    text-align: center;
-    color: rgb(44, 3, 15);
-    background:rgb(243, 238, 232);
-    border-radius: 200px;
-    padding: 5px;
-    
-}
+.section-title h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #002e5b;
+  margin: 0;
+  text-align: center;
+  padding: 4em;
+  padding-bottom: 5px;
+  font-size: 40px;
 
-.section-title h1{
-    font-family:"Montserrat", sans-serif;
-    color:rgb(44, 3, 15);
-    margin:0;
-    text-align: center;
-    padding: 4em; 
-    padding-bottom: 5px;
-    font-size: 40px;   
-}
-
-h2 { font-weight: bold;
-   font-size: 20px;
-   color: rgb(44, 3, 15);
-   text-align: center;
-   padding: 2em;
-   padding-bottom: 0.2em;
-   font-family: "Montserrat", sans-serif;
+  
 }
 
 
-.container-contenido  p {
-    
-    text-align: justify;
-    font-size: 25px;
-    padding: 70px;
-    padding-top: 25px;
-
+.container-contenido p {
+  text-align: justify;
+  font-size: 25px;
+  padding: 70px;
+  padding-top: 25px;
+  color: #555555;
 }
-
-
 
 .frase {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 .titulo {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .ul {
-    margin-top: 20px;
-    font-size: 25px;
-    text-align: left;
-    margin-left: 60px;
-
+  margin-top: 20px;
+  text-align: left;
+  margin-left: 60px;
+  color: #555555;
 }
 .ul-servicios {
-    margin-top: 20px;
-    font-size: 25px;
-    justify-content: space-between;
-    display: flex;
+  margin-top: 20px;
+  font-size: 25px;
+  justify-content: space-between;
+  display: flex;
+  color: #002e5b;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  list-style:none;
 }
 
+.separador {
+  background-image: url(imagenes/librosapilados.jpg);
+  width: 100%;
+  height: 190px;
 
-.separador ::before{
-    background: url(imagenes/taza.jpg);
-    display: contents;
-       
-    
-}    
+}
+
+/*contacto*/
 
 .contact-info p {
-    padding-bottom: 25px;
-    padding-top: 25px;
-    text-align: center;
-    color: #444;
-
-
+  padding-bottom: 25px;
+  padding-top: 25px;
+  text-align: center;
+  color: #444;
 }
-.section-title .section-final  {
-    padding-bottom: 10px;
+.section-title .section-final {
+  padding-bottom: 10px;
 }
 
-.formulario {max-width: 700px; padding-left: 25%;padding-bottom: 50px; font-family: 'Source Sans Pro', sans-serif;}
-.campo-form {width:100%; height:36px; margin:2px 0 6px; padding-left:6px; box-sizing: border-box; border-radius:3px; border:0; font-family: 'Source Sans Pro', sans-serif; font-size:1em;}
-label span {color: #f00}
-textarea {min-height: 150px!important;}
-.btn-form {display: inline-block; border:0; background: rgb(54, 53, 53); height: 46px; line-height: 46px; padding: 0 20px; border-radius: 6px; color:#fff; text-decoration: none; text-transform: uppercase; letter-spacing: 1px}
-.btn-form:hover {background: #444}
+.formulario {
+  max-width: 700px;
+  padding-left: 25%;
+  padding-bottom: 50px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #555555;
+}
+.campo-form {
+  width: 100%;
+  height: 36px;
+  margin: 2px 0 6px;
+  padding-left: 6px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1em;
+}
+label span {
+  color: #f00;
+}
+textarea {
+  min-height: 150px !important;
+}
+.btn-form {
+  display: inline-block;
+  border: 0;
+  background: rgb(99, 97, 97);
+  height: 46px;
+  line-height: 46px;
+  padding: 0 20px;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.btn-form:hover {
+  background: #444;
+}
 
 .enviar {
-    font-size:20px ;
-    
-    
-    
+  font-size: 20px;
+}
+
+.footer {
+  background-color: #002e5b;
+  display: flex;
+  width: 100%;
+  height: 200px;
 }
