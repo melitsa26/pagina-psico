@@ -65,7 +65,7 @@ body {
   display: inline-block;
    
 }
-.navigation ul li a {
+.navigation-link {
   display: block;
   padding: 0.5rem 1rem;
   font-size: 20px;
@@ -98,6 +98,11 @@ body {
   border-radius: 100%;
 }
 
+.titulo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .titulo-foto {
   color: rgb(248, 245, 245);
   background-color:rgba(38, 50, 88, 0.518);
@@ -107,9 +112,9 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 45px;
   font-weight: 50;
-
 }
-.frase h2 {
+
+.frase {
   display: inline;
   text-align: center;
   color: rgb(248, 242, 244);
@@ -117,9 +122,10 @@ body {
   border-radius: 200px;
   padding: 5px;
   font-weight: 100;
+  margin-top: 20px;
 }
 
-.section-title h1 {
+.section-title {
   font-family: "Montserrat", sans-serif;
   color: #002e5b;
   margin: 0;
@@ -127,25 +133,21 @@ body {
   padding: 4em;
   padding-bottom: 5px;
   font-size: 40px;
-
-  
 }
 
+.section-title-experiencia {
+  padding: 30px;
+  
+}
+  
 
-.container-contenido p {
+.sobremi {
   text-align: justify;
   font-size: 25px;
   padding: 70px;
   padding-top: 25px;
   color: #555555;
-}
-
-.frase {
-  margin-top: 20px;
-}
-.titulo {
-  margin-top: 20px;
-}
+} 
 
 .ul {
   margin-top: 20px;
@@ -164,11 +166,28 @@ body {
   text-decoration: none;
   list-style:none;
 }
+.subtitulos {
+  font-size: 20px;
+  text-align: center;
+
+}
+.item {
+  flex-basis: 33%;
+  margin-left: 40px;
+}
+.info {
+  font-size: 15px;
+  font-weight: normal;
+  color: #555555;
+  text-align: justify;
+}
 
 .separador {
   background-image: url(imagenes/librosapilados.jpg);
   width: 100%;
   height: 190px;
+  margin-top: 25px;
+  margin-bottom: 10px;
 
 }
 
