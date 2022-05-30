@@ -184,9 +184,16 @@ body {
   text-align: center;
 
 }
+
+.ul-servicios .item :hover {
+  transform: translate(50px);
+}
+
+
 .item {
   flex-basis: 33%;
   margin-left: 40px;
+
 }
 .info {
   font-size: 15px;
