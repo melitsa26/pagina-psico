@@ -10,7 +10,30 @@
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
     <script src="./script.js"></script>
     <link rel="shortcut icon" href="imagenes/favicon/faviconletra.png" type="image/x-icon">
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function handleDOMLoaded() {
+            var abierto;
+            var cartas = document.querySelectorAll(".servicios-cartas>.carta")
+            for (var i = 0; i < cartas.length; i++){
+                var carta = cartas[i];
+                const button = carta.querySelector("button");
+                const info = carta.querySelector(".info");
+                function handler(carta) {
+                    button.addEventListener("click", function (ev) {
+                    info.style.display = 'block';
+                    button.style.display = 'none';
+                    if (abierto != null) {
+                        abierto.querySelector(".info").style.display = 'none';
+                        abierto.querySelector("button").style.display = 'inline-block';
+                    }
+                    abierto = carta;
+                    })
+                }
+                handler(carta);
+                
+            }
+        })
+    </script>
    
 </head>
 
@@ -27,86 +50,104 @@
                     <li><a class="navigation-link" href="#SERVICIOS">SERVICIOS</a></li>
                     <li><a class="navigation-link" href="#CONTACTO">CONTACTO</a></li>
                 </ul>
-                <nav class="hamburger">
-                <a href="#" id="menu-icon">
-                    <i class="las la-bars"></i>
-                </a>
-                </nav>
+
            </nav>
         </div>
         </header>
 
-        <main>
+        
             <div class="background">
-                <img src="imagenes/melisa2.jpg" class="mifoto"/> 
+                <img src="imagenes/melicuadrado.jpg" class="mifoto"/> 
                 <div class="titulo">
                     <h1 class="titulo-foto">Licenciada en Psicología</h1>
-                </div>
-                
-                <h2 class="frase">"Se va al analista para cambiar el pasado, en el presente, en función del PORVENIR"</h2>
-                
+                </div>   
             </div>
 
-        
+        </section>
 
+        <section class="separador">
             
-            <div class="container-contenido">
+        </section>
+
+        
+            <div class="sobremi">
                    
                 <h1 class="section-title" id="ACERCA DE MI">Acerca de mi</h1>
-                
-                <p class="sobremi"> << El Psicoanálisis permite generar cambios duraderos e inolvidables en la vida de las personas. Creando un <b>espacio íntimo</b>, donde lo importante no es lo que se dice, sino sorprenderse con aquello que se produce en ese encuentro.
+                <p> El Psicoanálisis permite generar cambios duraderos e inolvidables en la vida de las personas. Creando un <b>espacio íntimo</b>, donde lo importante no es lo que se dice, sino sorprenderse con aquello que se produce en ese encuentro.
                 Se trata de una conversación distinta a cualquier conversación cotidiana, donde la intimidad permite aprender a escucharse.
                 Se genera un vínculo entre el analista y el paciente generador de cambios desde el comienzo.
-                <br>Como profesional de la Salud, me encuentro en constante formación. Considero el ejercicio de la lectura, la supervisión de casos y el análisis personal, como pilares fundamentales.>> </p>
+                <br>Como profesional de la Salud, me encuentro en constante formación. Considero el ejercicio de la lectura, la supervisión de casos y el análisis personal, como pilares fundamentales.</p>
 
+            </div> 
 
-            <section class="CV" id="CV">
-                  
-                <h1 class="section-title">Formación</h1>
-               
-                <ul>
-                    <li class="itemsformacion">Licenciada en Psicología (UBA)</li>
-                    <li class="itemsformacion">Orientación psicoanalítica</li>
-                    <li class="itemsformacion">Perspectiva de Género y Derechos Humanos</li>
-                    <li class="itemsformacion">Posgrado con especialización en Clínica Psicoanalítica con Adultos</li>    
-                </ul>
-                
-                <h1 class="section-title section-title-experiencia">Experiencia</h1>
+       
+
+        <section class="separador">
             
-                <ul>
-                    <li class="itemexperiencia">En el <b>ámbito Privado</b> brindo atención VIRTUAL y PRESENCIAL, a niños, adolescentes y adultos.</li>
-                    <li class="itemexperiencia">En el <b>ámbito Institucional</b> soy Psicóloga Clínica en <i>Centro Dos</i>, Asociación Civil para la asistencia y la docencia.</li>
-                    <li class="itemexperiencia">En el <b>ámbito Educativo</b>, me desempeño como Psicóloga en <i>Acompsi</i>, Centro de Apoyo a la inclusión escolar, acompañando a niños y jóvenes con necesidades de apoyo en su trayectoria escolar.</li>
+        </section>
+
+            <section id="CV">
+            <div class="container-cv">
+                
+                <div class="carta-formacion">
+                <h1 class="section-title">Formación</h1>
+                <ul class="formacion__lista">
+                    <li class="itemsformacion">🎓 Licenciada en Psicología (UBA)</li>
+                    <li class="itemsformacion">🧠 Orientación Psicoanalítica</li>
+                    <li class="itemsformacion">🌎 Perspectiva de Género y Derechos Humanos</li>
+                    <li class="itemsformacion">📚 Posgrado con especialización en Clínica Psicoanalítica con Adultos</li>    
+                </ul>
+                </div>
+                
+                <div class="carta-formacion">
+                <h1 class="section-title section-title-experiencia">Experiencia</h1>
+                 <ul>
+                    <li class="itemexperiencia">En el <b>ámbito Privado</b> Brindo atención VIRTUAL y PRESENCIAL, a niños, adolescentes y adultos.</li>
+                    <li class="itemexperiencia">En el <b>ámbito Institucional</b> Me desempeño como Psicóloga Clínica en <i>Centro Dos</i>, Asociación Civil para la asistencia y la docencia.</li>
+                    <li class="itemexperiencia">En el <b>ámbito Educativo</b>, Soy Psicóloga en <i>Acompsi</i>, Centro de Apoyo a la inclusión escolar. Acompaño a niños y jóvenes con necesidades de apoyo en su trayectoria escolar.</li>
                     <li class="itemexperiencia"> En el <b>ámbito Hospitalario</b> realicé: <br> -Prácticas en el servicio de interconsultas del <i>Hospital General de Agudos Bernardino Rivadavia. </i> <br> -Prácticas en el <i> Hospital Materno Neonatal Estela de Carlotto</i> y <i>Hospital Materno Infantil Ramón Sardá</i><br> -Prácticas en <i>Hospital de Niños Dr. Ricardo Gutierrez</i>. Terapia Multifamiliar, niños con enfermedades psicosomáticas</li>
                     <li class="itemexperiencia">Dicto <b>Talleres Terapéuticos</b> individuales y grupales, con apoyo en la Literatura y el Arte en general.</li>
                     
-                </ul>
-
+                 </ul>
+                </div>
+            </div>
             </section>
 
-                <div class="section-title">
+            <section class="separador">
+            
+            </section>
+    
+
+            <section id="servicios">
+            <div class="container-servicios">
                     <h1 class="section-title" id="SERVICIOS">Servicios</h1>
-                </div>
-               
-            <ul class="ul-servicios">
-                <li class="item">
+
+                <div class="servicios-cartas">
+                    <div class="carta">
                     <h3 class="subtitulos">Terapia individual</h3>
                     <p class="info">Los motivos de consulta tienen como raíz diversas causales que se manifiestan a través de la angustia que surje de manera sorpresiva e invasiva sin motivo aparente, episodios de ansiedad, síntomas físicos sin cuasa orgánica, alteración del sueño, miedos, inseguridades. En niños y adolescentes pueden expresarse a través de conductas inapropiadas o llamativas, pesquisadas por la institución educativa a la que asisten o el núcleo familiar. Estas son como la punta de un obillo que insiste en ser desarmado para poder desplegarse. Por ello la importancia de comprender la naturaleza de estas manifestaciones como la expresión de un conflicto que requiere tramitación. Estas expresiones responden a un momento de emergencia subjetiva en la vida de la persona porque cuestionan el modo habitual de funcionamiento de la misma.</p>
-                </li>
+                    <button class="carta__button">Leer más...</button>
+                    </div>
 
-                <li class="item">
-                    <h3 class="subtitulos">Psicodiagnósticos</h3>   
-                    <p class="info">El psicodiagnóstico es un proceso que tiene como objetivo principal el estudio, descripción y comprensión profunda de la estructura de personalidad del solicitante en un momento determinado. Arribando, de este modo, a un diagnóstico del estado de salud mental de la persona, siendo fundamental para orientar un curso laboral, judicial o un tratamiento individual. Dentro de dicho proceso se evalúan las distintas áreas del funcionamiento psicológico del paciente (afectiva, cognitiva y relacional), y se intenta definir las características de personalidad y conflictos que subyacen al motivo de consulta que la persona trae consigo.
+                
+                    <div class="carta">
+                    <h3 class="subtitulos">Terapia de pareja</h3>   
+                    <p class="info">La terapia de pareja psicoanalítica es distinta a la terapia individual psicoanalítica, focalizándose en el conocimiento de la realidad psíquica y funcionamiento psíquico de la pareja, es decir, en el inconsciente común de la pareja, y se apoya en el conjunto de desarrollos teóricos y clínicos que conforman el psicoanálisis. La pareja es vista como un sistema interactivo y la terapia se basa en el conocimiento de este sistema de influencia y regulación mutua. En él, el funcionamiento psíquico está constituido por lo intrasubjetivo (determinantes psíquicos que vienen del mundo interior) y lo intersubjetivo (determinantes psíquicos que incluyen al otro).
                     </p>
-                </li>
-                <li class="item">
+                    <button class="carta__button">Leer más...</button>
+                    </div>
+
+                    <div class="carta">
                     <h3 class="subtitulos">Orientación a padres</h3>
                     <p class="info">La Orientación a Padres es un espacio para que los mismos puedan sentirse escuchados, comprendidos y apoyados. Estos necesitan expresar sus emociones, temores, dudas, sentimientos acerca de sus hijos, en un clima profesional de confianza y empatía. Tanto los padres como el psicólogo diseñarán y construirán de forma conjunta las pautas y recursos para resolver y afrontar los cambios necesarios relativos a la educación.
                     A través de la Orientación, los padres logran comprender cómo es la dinámica de funcionamiento entre ellos y sus hijos. Se desarrollan posibilidades de conocimiento, de intercambio y de aportaciones. El plantear y aclarar dudas y el compartir inquietudes es un indicador de implicación en el proceso educativo.
                     En las sesiones se van creando pautas educativas claras. Estas pautas deben ayudar a los padres a poner límites, a transmitir mensajes claros y a mantenerse firmes en sus decisiones. Es conveniente brindarles a los hijos roles y vínculos cargados de afecto y contención dentro y fuera de la familia.</p>
-                </li>
-            </ul>  
-            </main>
+                    <button class="carta__button">Leer más...</button>
+                    </div>
+                </div>
+            
+            </div>
+            </section>
 
                 <section class="separador">
                     
@@ -142,5 +183,6 @@
 
                 </div>
             </footer>
-
+                      
 </body>
+</html>
